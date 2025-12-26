@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="admin-box">
+  <h2>Admin Panel</h2>
+  <input type="password" id="pass" placeholder="Enter Password">
+  <button onclick="checkAdmin()">Login</button>
+
+  <p id="adminMsg"></p>
+</div>
+
+<script>
+function checkAdmin(){
+  let p=document.getElementById("pass").value;
+  if(p==="TOUSIF"){
+    document.getElementById("adminMsg").innerText="Welcome Admin ✔";
+  }else{
+    document.getElementById("adminMsg").innerText="Wrong Password ❌";
+  }
+}
+</script>
+
+</body>
+</html>
