@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admin Login</title>
+<title>Admin Dashboard</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="admin-box">
-  <h2>Admin Panel</h2>
-  <input type="password" id="pass" placeholder="Enter Password">
-  <button onclick="checkAdmin()">Login</button>
+<div id="loginBox">
+<h2>🔐 Admin Login</h2>
+<input type="password" id="pass" placeholder="Password">
+<button onclick="login()">Login</button>
+</div>
 
-  <p id="adminMsg"></p>
+<div id="panel" style="display:none">
+<h1>📊 Admin Dashboard</h1>
+
+<h3>📅 Bookings</h3>
+<div id="bookings"></div>
+<button onclick="clearBookings()">Delete All Bookings</button>
+
+<h3>⭐ Reviews</h3>
+<div id="reviews"></div>
+<button onclick="clearReviews()">Delete All Reviews</button>
 </div>
 
 <script>
-function checkAdmin(){
-  let p=document.getElementById("pass").value;
-  if(p==="TOUSIF"){
-    document.getElementById("adminMsg").innerText="Welcome Admin ✔";
-  }else{
-    document.getElementById("adminMsg").innerText="Wrong Password ❌";
-  }
-}
-</script>
+const PASS="TOUSIF";
 
+function login(){
+  if(document.getElementById("pass").value===PASS){
+    loginBox.style.display="none";
+    panel.style.display="block";
+    loadData();
+  }else alert("Wrong Password");
+}
+
+function loadData(){
+  bookings.innerHTML=(JSON.parse(localStorage.getItem("bookings"))||[])
+  .map(b=>`<p>${b.name} - ${b.phone}<br>${b.msg}</p>`).join("");
+  reviews.innerHTML=(JSON.parse(localStorage.getItem("reviews"))||[])
+  .map(r=>`<p>${r.name}: ${r.msg}</p>`).join("");
+}
+
+function clearBookings(){localStorage.removeItem("bookings");loadData();}
+function clearReviews(){localStorage.removeItem("reviews");loadData();}
+</script>
 </body>
 </html>
