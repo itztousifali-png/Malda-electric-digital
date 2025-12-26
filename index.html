@@ -3,69 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <title>Malda Electric & Digital</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-<!-- DRAWER MENU -->
-<div id="drawer">
-  <a href="index.html">Home</a>
-  <a href="#services">Services</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="admin.html">Admin</a>
-</div>
-
-<!-- HEADER -->
 <header>
-  <i class="fa-solid fa-bars menu-btn" onclick="toggleMenu()"></i>
+  <h1>🔌 Malda Electric & Digital</h1>
+  <p>Electrical & Digital Services in Malda</p>
 
-  <h2>Malda Electric & Digital</h2>
-
-  <div class="header-icons">
-    <i class="fa-solid fa-bell" onclick="notify()"></i>
-    <a href="https://wa.me/918250687140"><i class="fa-brands fa-whatsapp"></i></a>
+  <div class="icons">
+    <a href="https://wa.me/918250687140"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://facebook.com/share/1EAymap5WF/"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com/x___boy___t_o_u_s_i_f___143"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@tousif-voice92"><i class="fab fa-youtube"></i></a>
   </div>
 </header>
 
-<!-- BANNER -->
-<section class="banner">
-  <h1>All Electrical & Computer Solutions</h1>
-  <p>ইলেকট্রিক কাজ + কম্পিউটার ও অনলাইন সার্ভিস</p>
+<input id="search" placeholder="🔍 Search services">
 
-  <div class="banner-btns">
-    <a href="tel:8250687140">📞 Call Now</a>
-    <a href="#" onclick="whatsappAuto()">💬 WhatsApp</a>
-  </div>
+<section class="section">
+<h2>⚡ Our Services</h2>
+<div class="card">House Wiring</div>
+<div class="card">Meter Installation</div>
+<div class="card">Inverter / Solar</div>
+<div class="card">Online Form Fill-up</div>
+<div class="card">Aadhaar / PAN</div>
+<div class="card">Excel / PDF / Print</div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="services">
-  <div class="service big">⚡ House Wiring (LT / HT)</div>
-  <div class="service big">🔌 Meter Installation</div>
-  <div class="service big">☀️ Inverter & Solar</div>
-  <div class="service big">🖥 Online Form Fill-up</div>
-  <div class="service big">📄 Aadhaar / PAN / Voter</div>
-  <div class="service big">📊 Excel / Data Entry</div>
+<!-- BOOKING -->
+<section class="section dark">
+<h2>📅 Book a Service</h2>
+<input id="bname" placeholder="Your Name">
+<input id="bphone" placeholder="Mobile Number">
+<textarea id="bmsg" placeholder="Service Details"></textarea>
+<button onclick="bookService()">Submit Booking</button>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Malda Electric & Digital</p>
+<!-- PAYMENT -->
+<section class="section">
+<h2>💳 Payment</h2>
+<p>UPI ID: <b>8250687140@upi</b></p>
+<img src="https://i.imgur.com/8Km9tLL.png" class="upi">
+<button onclick="paymentDone()">Payment Done</button>
+</section>
 
-  <div class="social-icons">
-    <a href="https://www.facebook.com/share/1EAymap5WF/"><i class="fa-brands fa-facebook"></i></a>
-    <a href="https://www.instagram.com/x___boy___t_o_u_s_i_f___143"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://youtube.com/@tousif-voice92"><i class="fa-brands fa-youtube"></i></a>
-  </div>
-</footer>
+<!-- REVIEWS -->
+<section class="section dark">
+<h2>⭐ Customer Reviews</h2>
+<input id="rname" placeholder="Your Name">
+<textarea id="rmsg" placeholder="Your Review"></textarea>
+<button onclick="addReview()">Submit Review</button>
+<div id="reviewList"></div>
+</section>
 
-<!-- FLOATING WHATSAPP -->
-<a class="float-wa" onclick="whatsappAuto()">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
+<!-- MAP -->
+<section class="section">
+<h2>📍 Our Location</h2>
+<iframe src="https://maps.google.com/maps?q=Malda%20West%20Bengal&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<!-- FLOATING -->
+<div class="floating">
+<a href="tel:8250687140"><i class="fas fa-phone"></i></a>
+<a href="https://wa.me/918250687140?text=Hello%20I%20need%20service"><i class="fab fa-whatsapp"></i></a>
+</div>
 
 <script src="script.js"></script>
 </body>
