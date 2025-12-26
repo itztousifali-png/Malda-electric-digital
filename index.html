@@ -5,102 +5,67 @@
 <title>Malda Electric & Digital</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
+<!-- DRAWER MENU -->
+<div id="drawer">
+  <a href="index.html">Home</a>
+  <a href="#services">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="admin.html">Admin</a>
+</div>
+
 <!-- HEADER -->
-<header class="top">
-  <div class="logo">Malda Electric & Digital</div>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
+<header>
+  <i class="fa-solid fa-bars menu-btn" onclick="toggleMenu()"></i>
 
-  <nav id="menu">
-    <a href="#home">Home</a>
+  <h2>Malda Electric & Digital</h2>
 
-    <div class="dropdown">
-      <span onclick="toggleSub()">Services ▾</span>
-      <div class="submenu" id="submenu">
-        <span onclick="goSection('electrical')">Electrical</span>
-        <span onclick="goSection('online')">Online / Computer</span>
-      </div>
-    </div>
-
-    <a href="#projects">Projects</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="header-icons">
+    <i class="fa-solid fa-bell" onclick="notify()"></i>
+    <a href="https://wa.me/918250687140"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
 </header>
 
-<!-- SOCIAL ICONS -->
-<div class="social">
-  <a href="https://wa.me/918250687140"><i class="fa-brands fa-whatsapp"></i></a>
-  <a href="tel:8250687140"><i class="fa-solid fa-phone"></i></a>
-  <a href="https://www.facebook.com/share/1EAymap5WF/"><i class="fa-brands fa-facebook"></i></a>
-  <a href="https://www.instagram.com/x___boy___t_o_u_s_i_f___143"><i class="fa-brands fa-instagram"></i></a>
-  <a href="https://youtube.com/@tousif-voice92"><i class="fa-brands fa-youtube"></i></a>
-  <i class="fa-solid fa-bell" onclick="notify()"></i>
-</div>
-
-<!-- SEARCH -->
-<div class="search">
-  <input type="text" id="searchInput" placeholder="Search services..." onkeyup="searchService()">
-</div>
-
 <!-- BANNER -->
-<section class="banner" id="home">
-  <h1>All Electrical & Computer Solutions Under One Roof</h1>
+<section class="banner">
+  <h1>All Electrical & Computer Solutions</h1>
   <p>ইলেকট্রিক কাজ + কম্পিউটার ও অনলাইন সার্ভিস</p>
+
+  <div class="banner-btns">
+    <a href="tel:8250687140">📞 Call Now</a>
+    <a href="#" onclick="whatsappAuto()">💬 WhatsApp</a>
+  </div>
 </section>
 
-<!-- ELECTRICAL -->
-<section id="electrical">
-<h2>Electrical Services</h2>
-<div class="services">
-  <div class="card"><img src="images/wiring.jpg"><p>House Wiring (LT / HT)</p></div>
-  <div class="card"><img src="images/meter.jpg"><p>Meter Installation</p></div>
-  <div class="card"><img src="images/wiring.jpg"><p>DB Panel Work</p></div>
-  <div class="card"><img src="images/wiring.jpg"><p>Inverter & Solar</p></div>
-  <div class="card"><img src="images/wiring.jpg"><p>Motor / Pump Repair</p></div>
-</div>
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="service big">⚡ House Wiring (LT / HT)</div>
+  <div class="service big">🔌 Meter Installation</div>
+  <div class="service big">☀️ Inverter & Solar</div>
+  <div class="service big">🖥 Online Form Fill-up</div>
+  <div class="service big">📄 Aadhaar / PAN / Voter</div>
+  <div class="service big">📊 Excel / Data Entry</div>
 </section>
 
-<!-- ONLINE -->
-<section id="online">
-<h2>Online / Computer Services</h2>
-<div class="services">
-  <div class="card"><img src="images/computer.jpg"><p>Online Form Fill-up</p></div>
-  <div class="card"><img src="images/computer.jpg"><p>Aadhaar / PAN / Voter</p></div>
-  <div class="card"><img src="images/computer.jpg"><p>PDF / Scan / Print</p></div>
-  <div class="card"><img src="images/computer.jpg"><p>Excel / Data Entry</p></div>
-</div>
-</section>
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Malda Electric & Digital</p>
 
-<!-- GALLERY -->
-<section id="gallery">
-<h2>Work Gallery</h2>
-<div class="gallery">
-  <img src="images/gallery1.jpg">
-  <img src="images/gallery2.jpg">
-  <img src="images/wiring.jpg">
-</div>
-</section>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/share/1EAymap5WF/"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/x___boy___t_o_u_s_i_f___143"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://youtube.com/@tousif-voice92"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+</footer>
 
-<!-- CONTACT -->
-<section id="contact">
-<h2>Contact</h2>
-<p>📞 8250687140</p>
-<p>📍 Malda, West Bengal</p>
-</section>
-
-<!-- FLOAT WHATSAPP -->
-<a href="https://wa.me/918250687140" class="float">
+<!-- FLOATING WHATSAPP -->
+<a class="float-wa" onclick="whatsappAuto()">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
-
-<footer>
-© 2026 Malda Electric & Digital
-</footer>
 
 <script src="script.js"></script>
 </body>
